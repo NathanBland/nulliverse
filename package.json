@@ -1,0 +1,33 @@
+{
+  "name": "nulliverse-api",
+  "version": "1.0.0",
+  "description": "An api to provide permission enabled blogging.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanBland/nulliverse-api.git"
+  },
+  "keywords": [
+    "blog",
+    "cms",
+    "serverless",
+    "node.js",
+    "passport",
+    "content",
+    "json",
+    "authentication",
+    "mongo"
+  ],
+  "author": "Nathan Bland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NathanBland/nulliverse-api/issues"
+  },
+  "homepage": "https://github.com/NathanBland/nulliverse-api#readme",
+  "devDependencies": {
+    "serverless-offline": "^3.20.3"
+  }
+}
