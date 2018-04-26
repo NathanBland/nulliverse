@@ -51,16 +51,39 @@ provider:
 package:
  include:
    - features/**
+   - models/**
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
 
-functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http: get /
+custom:
+  serverless-offline:
+    corsAllowOrigin: "*"
+    corsAllowHeaders: "Origin, X-Requested-With, Content-Type, Accept"
 
+functions:
+  loginUser:
+    handler: features/auth/login.loginUser
+    events:
+      - http: 
+          path: auth/login
+          method: post
+          cors: true
+  logoutUser:
+    handler: features/auth/logout.logout
+    events:
+      - http: 
+          path: auth/logout
+          method: post
+          cors: true
+  registerUser:
+    handler: features/auth/register.createUser
+    events:
+      - http: post auth/register
+  authCheck:
+    handler: features/auth/me.me
+    events:
+      - http: post auth/me
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
